@@ -1582,11 +1582,11 @@ jv2=lowest(J );
 long int highest(long int *m)
 {
   
-  int largest=m[0];                        
+  int largest=m;                        
   for(int i=0;i<10;i++)
   {
-  if(m[i]>largest)
-  largest=m[i];
+  if(m[i+1]>largest)
+  largest=m[i+1];
   }
   //Serial.print(m[i]);
   return largest;
@@ -1594,13 +1594,13 @@ long int highest(long int *m)
 
 long int lowest(long int *m)                                                   
 {
-  int smallest=m[0];       
+  int smallest=m;       
   for(int i=0;i<10;i++)
   {
-  if(m[i]<smallest)
-  smallest=m[i];
+  if(m[i+1]<smallest)
+  smallest=m[i+1];
   }
-  //Serial.print(m[i]);
+  //Serial.print(m[i+1]);
   return smallest;
 }
 
